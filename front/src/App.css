@@ -1,0 +1,496 @@
+
+@keyframes clickAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes hoverAnimation{
+  0%{transform: scale(1);}
+  50%{transform:scale(1.1);}
+  100%{transform:scale(1.1);}
+}
+
+body{
+  text-align: center;
+  width:100%;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(#c4d3da, white);
+
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+}
+
+.header{
+  background: #2aa0dc;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top:0;
+  width:100%;
+  z-index: 100;
+}
+row{
+  display: inline;
+}
+
+.header h1{
+  color: white;
+  padding-left: 1px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.header h1,.header .navbar{
+  margin:0;
+}
+.header a{
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.header a:hover{
+  float: left;
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #2794ca;
+}
+.header a.active{
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #2486b7;
+}
+
+
+
+
+.App {
+  text-align: center;
+  padding-top: 50px;
+}
+
+
+.logo{
+  max-width: 50px;
+  max-height: auto;
+}
+.cover{
+  max-Width: 300px;
+  border: 1px solid black;
+  background-color: white;
+}
+.description{
+  margin: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+  white-space: pre-line
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.adminUl{
+  justify-content: center;
+  list-style-type: none ;
+  display: flex;
+}
+
+.formUl{
+  display: block;
+}
+formUl, li{
+  list-style-type: none ;
+}
+.formUl, p{
+  font-weight: bold;
+}
+p{
+  font-weight: normal;
+}
+.error{
+  color: red;
+}
+label{
+  font-weight: bold;
+}
+.labelLine{
+  display:block
+}
+
+input[type="text"]{
+  border: 1px solid blue
+}
+textArea{
+  border: 1px solid blue;
+}
+.adminPanel {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  border:  1px dashed grey;
+}
+
+.separator{
+  display: flex;
+  flex-direction: row;
+}
+
+.adminUl{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+/*Cosas de botones */
+button{
+  background-color: #2aa0dc;
+  border: 1px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.goBookButton{
+
+}
+.updateButton{
+    background-color: #aea009;
+    border: 1px solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.deleteButton{
+  background-color: #ae0909;
+  border: 1px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.deleteButton:hover{
+  background-color: #570707;
+}
+
+.editButton{
+  margin-left: 30px;
+  text-decoration: none;
+  background-color: rgb(186, 186, 186);
+  border-radius: 100px;
+  padding: 3px;
+  margin-top: 7px;
+  margin-bottom: 5px;
+  
+}
+
+.editButton:hover{
+  animation: hoverAnimation;
+  animation-duration: 0.2s;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.editButton:click {
+  animation: clickAnimation;
+  animation-duration: 0.1;
+}
+
+.divList{
+  background-color: #b4edff;
+  border: 1px solid #61dafb;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookCard{
+  background-color: #405B69;
+  padding-top: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-inline: 5%;
+  padding-bottom: 30px;
+  border: 3px solid rgb(97, 97, 97);
+  border-radius: 60px;
+
+}
+.bookCard img{
+  max-width: 100px;
+  margin-inline: 50px;
+  border: 1px solid black;
+  background-color: white;
+}
+.bookCard p{
+  margin-inline: 50px;
+  color: white;
+}
+.bookCard h3{
+  color:white;
+}
+.bookCard h4{
+  text-decoration: none;
+  color: white;
+  background-color: #000000;
+  padding: 4px;
+  border-radius: 100%;
+  display: inline-block;
+}
+.bookCard h4:hover{
+  animation: hoverAnimation;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+.bookCard div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editingBookDiv{
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.editingBookDiv .editButton{
+  display: flex;
+  flex-direction: column;
+}
+
+.bookLink{
+  text-decoration: none;
+  color: white;
+
+}
+
+.bookLink:visited{
+  text-decoration: none;
+  color: white;
+}
+
+.divList p{
+  margin-left: 40px;
+}
+edtingBookDiv{
+  display: flex;
+  flex-direction: column;
+}
+.aList{
+   text-Decoration: 'none';
+   color: 'inherit'}
+
+.title:hover{
+  animation: hoverAnimation;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+.bookAuthor{
+  
+}
+
+.updateButton:hover{
+  background-color: #5f5806;
+}
+button:active{
+  animation-name: clickAnimation;
+  animation-duration: 0.2s;
+}
+button:hover{
+  background-color: #2486b7;
+}
+
+.loginPage{
+  margin-top: 30px;
+}
+
+
+
+.submitButton{
+  background-color: #2aa0dc;
+  border: 1px solid black;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.submitButton:active{
+  animation-name: clickAnimation;
+  animation-duration: 0.2s;
+  
+}
+
+
+
+iframe{
+  min-height: 1000px;
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #2aa0dc;
+  margin-bottom: 20px;
+}
+
+embed{
+  width: 1400px;
+  height: 1000px;
+}
+
+@media (max-width: 768px) {
+  .header .logo {
+    display: none;
+  }
+  .header h1{
+    display: none;
+  }
+
+  textArea{
+    max-width: 300px;
+  }
+  
+  .header navBar {
+    display: flex; 
+    flex-direction: column;
+  }
+  .cover{
+    max-Width: 150px;
+    border: 1px solid black;
+    margin: 2px;
+    margin-left: 20px;
+  }
+  .bookCard h3{
+    margin-right: 10px;
+  }
+  .bookCard p{
+    scale: 75%;
+    margin-inline: -13px;
+  }
+
+  .navLinkP{
+    scale: 75%;
+  }
+  .title{
+    scale: 75%;
+  }
+  .bookAuthor{
+    scale: 75%;
+  }
+  .isbn{
+    scale: 75%;
+    margin-right: 4px;
+    display:none;
+  }
+  .isbnE{
+    scale: 75%;
+    margin-right: 4px;
+    display:none;
+  }
+
+  .editingBookDiv{
+    margin-left: 10px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .adminUl{
+    flex-direction: column;
+  }
+  .updateButton {
+    flex-direction: row;
+  }
+  .nameOfAuthor{
+    margin-top: 20px;
+    scale: 85%;
+  }
+  .adminUl .separator{
+    display: flex;
+    flex-direction: row;
+  }
+  .editButton{
+    margin-right: 10px;
+  }
+  .bookPage div h1{
+    scale: 85%;
+  }
+  
+  
+}
+@media (max-width: 376px) {
+
+  .navbar{
+    justify-content: center;
+  }
+  .bookAuthor{
+    scale: 75%;
+  }
+  .nameOfAuthor{
+    margin-top: 20px;
+    scale: 65%;
+  }
+  .navLinkP{
+    margin-inline: -14px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .editButton{
+    margin-left: 10px;
+  }
+
+  .cover{
+    margin-left: 30px;
+    max-width: 130px;
+  }
+
+  .bookPage div h1{
+    scale: 75%;
+  }
+  
+}
+
